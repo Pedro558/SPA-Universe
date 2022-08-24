@@ -38,18 +38,26 @@ export class Router{
     background(){
       const { pathname } = window.location
       const cssVariable = document.documentElement.style
+      const listItem = document.querySelectorAll('.menu-item')
+
+      listItem.forEach((item) =>{
+        item.firstChild.classList.remove('focus')
+      })
 
       switch( pathname ){
         case '/':
-          cssVariable.setProperty('--background', 'url(images/mountains-universe.png)')
+          cssVariable.setProperty('--background', 'url(images/mountains-universe.jpg)')
+          listItem[0].firstChild.classList.add('focus')
           break
 
         case '/universe':
-          cssVariable.setProperty('--background', 'url(images/mountains-universe02.png)')
+          cssVariable.setProperty('--background', 'url(images/mountains-universe02.jpg)')
+          listItem[1].firstChild.classList.add('focus')
           break
 
         case '/exploration':
-          cssVariable.setProperty('--background', 'url(images/mountains-universe-3.png)')
+          cssVariable.setProperty('--background', 'url(images/mountains-universe-3.jpg)')
+          listItem[2].firstChild.classList.add('focus')
           break
 
         default:

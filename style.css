@@ -19,7 +19,8 @@
 body{
   background: var(--background) no-repeat center/cover;
   font-family: var(--font-family);
-  
+  background-color: rgb(4, 4, 7);
+  transition: 1s;
 }
 
 h1{
@@ -60,6 +61,11 @@ a{
 
 a:hover{
   color: var(--font-color);
+}
+
+.focus{
+  font-weight: bold;
+  color: white;
 }
 
 #content{
