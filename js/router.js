@@ -36,18 +36,24 @@ export class Router{
     }
     
     background(){
-      const {pathname} = window.location
+      const { pathname } = window.location
       const cssVariable = document.documentElement.style
-  
-     if(pathname == '/'){
-      cssVariable.setProperty('--background', 'url(images/mountains-universe.png)')
-     } 
-     else if(pathname == '/universe'){
-      cssVariable.setProperty('--background', 'url(images/mountains-universe02.png)')
-     }
-     else if(pathname == '/exploration'){
-      cssVariable.setProperty('--background', 'url(images/mountains-universe-3.png)')
-     }
+
+      switch( pathname ){
+        case '/':
+          cssVariable.setProperty('--background', 'url(images/mountains-universe.png)')
+          break
+
+        case '/universe':
+          cssVariable.setProperty('--background', 'url(images/mountains-universe02.png)')
+          break
+
+        case '/exploration':
+          cssVariable.setProperty('--background', 'url(images/mountains-universe-3.png)')
+          break
+
+        default:
+          cssVariable.setProperty('--background', 'url(https://www.prestashop.com/sites/default/files/styles/blog_750x320/public/blog/pt/files/2013/12/http_code_404_error.jpg?itok=uFS5CFuQ)')
+      }
     }
-    
 }
