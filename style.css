@@ -43,7 +43,6 @@ p{
   position: absolute;
   font-size: var(--font-text);
   margin: 0 100px;
-  width: 100%;
   height: 9rem;
 }
 
@@ -124,6 +123,7 @@ a:hover{
     padding: 0 3rem;
     margin: 0;
     background-color: #c3c3ca24;
+    width: 100%;
   }
 
   
